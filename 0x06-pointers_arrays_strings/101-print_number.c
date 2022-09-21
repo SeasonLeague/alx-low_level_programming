@@ -1,4 +1,8 @@
 #include "main.h"
+
+
+
+
 void print_number(int n)
 {
 unsigned int m, d, count;
