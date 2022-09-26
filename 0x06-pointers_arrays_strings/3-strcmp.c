@@ -1,17 +1,20 @@
 #include "main.h"
+/**
+* _strcmp - compares two strings
+*@s1: string 1
+*@s2: string 2
+*Return: the value compared
+*/
 int _strcmp(char *s1, char *s2)
-
 {
+int n;
 
-char *str_one = s1;
-char *str_two = s2;
-
-
-while (*str_one != '\0' && *str_two != '\0' && *str_one == *str_two)
+for (n = 0; s1[n] != '\0'; n++)
 {
-str_one++;
-str_two++;
+if (s1[n] > s2[n])
+return (s1[n] - s2[n]);
+if (s2[n] > s1[n])
+return (s1[n] - s2[n]);
 }
-
-return (*str_one - *str_two);
+return (0);
 }
