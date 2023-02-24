@@ -1,5 +1,10 @@
-school: school.c
-	gcc -o school school.c
+CC=gcc
+CFLAGS=-Wall -Werror -pedantic -std=c99
 
 all: school
+
+school: school.c
+	$(CC) $(CFLAGS) -o school school.c
+
+
 
